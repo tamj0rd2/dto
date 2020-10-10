@@ -1,0 +1,15 @@
+node_modules
+yarn.lock
+lib
+.vscode
+coverage
+.npmrc
+json-schema
+.DS_Store
+icon.png
+.eslintcache
+codecov.sh
+.nyc_output
+
+black-box-tests/out
+black-box-tests/test-environment/**/*
