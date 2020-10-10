@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Primitives string returns the correct dianostics for fixture string-good.ts 1`] = `Array []`;
+
+exports[`Primitives string returns the correct dianostics for fixture string-null.ts 1`] = `
+Array [
+  Object {
+    "character": 14,
+    "fileName": "string-null.ts",
+    "line": 3,
+    "message": "Type 'null' is not assignable to type 'string'.",
+  },
+]
+`;
+
+exports[`Primitives string returns the correct dianostics for fixture string-undefined.ts 1`] = `
+Array [
+  Object {
+    "character": 14,
+    "fileName": "string-undefined.ts",
+    "line": 3,
+    "message": "Type 'undefined' is not assignable to type 'string'.",
+  },
+]
+`;

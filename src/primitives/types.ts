@@ -1,9 +1,9 @@
-import { DTO } from '../dto'
+import { Dto } from '../dto'
 
-export type StringResponse = DTO<string>
+export type StringDto = Dto<string>
 
-export type NumberResponse = DTO<number>
+export type NumberDto = Dto<number>
 
-export type BoolResponse = DTO<boolean>
+export type BoolDto = Dto<boolean>
 
-export type NullResponse = DTO<null>
+export type NullDto = Dto<null>

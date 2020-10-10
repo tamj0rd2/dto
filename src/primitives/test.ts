@@ -1,9 +1,11 @@
-import { createTestDeps } from '../test-helpers'
+import { createTestCase } from '../test-helpers'
 
 describe('Primitives', () => {
-  it('does a thing', () => {
-    const { getDiagnostics } = createTestDeps()
-
-    expect(getDiagnostics(__dirname)).toHaveLength(0)
+  describe('string', () => {
+    const stringTestCases = ['string-good.ts', 'string-null.ts', 'string-undefined.ts']
+    stringTestCases.forEach((fileName) =>
+      it(`returns the correct dianostics for fixture ${fileName}`, () =>
+        expect(createTestCase(__dirname, fileName)).toMatchDiagnosticsSnapshot()),
+    )
   })
 })

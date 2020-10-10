@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./test-out",
+    "noEmit": false,
+    "noErrorTruncation": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./tsconfig.tests.tsbuildinfo"
+  },
+  "include": ["./src/**/fixtures/*.ts"]
+}

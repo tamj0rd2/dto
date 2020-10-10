@@ -13,3 +13,5 @@ codecov.sh
 
 black-box-tests/out
 black-box-tests/test-environment/**/*
+test-out
+tsconfig.tests.tsbuildinfo

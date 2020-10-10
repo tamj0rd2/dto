@@ -1,1 +1,1 @@
-export type DTO<T> = T
+export type Dto<T> = T
