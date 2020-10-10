@@ -1,4 +1,6 @@
-import { NullDto } from '../types'
+import { Dto } from '../dto'
+
+export type NullDto = Dto<null>
 
 export const dtoGood: NullDto = null
 

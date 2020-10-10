@@ -2,7 +2,6 @@ import { existsSync } from 'fs'
 import { toMatchSnapshot } from 'jest-snapshot'
 import { resolve } from 'path'
 import ts from 'typescript'
-import { assertReceivedValueIsTestCase } from './test-helpers'
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -32,27 +31,23 @@ function getDiagnostics() {
 }
 
 expect.extend({
-  toMatchDiagnosticsSnapshot(received: unknown) {
-    try {
-      assertReceivedValueIsTestCase(received)
-    } catch (err) {
+  toMatchDiagnosticsSnapshot(fileName: unknown) {
+    if (typeof fileName !== 'string') {
       return {
         pass: false,
         message: () => 'Expected received value to be of type TestCase',
       }
     }
 
-    const [dirname, fileName] = received
-    const desiredFile = resolve(dirname, 'fixtures', fileName)
-
-    if (!existsSync(desiredFile)) {
-      return { message: () => `File ${desiredFile} does not exist`, pass: false }
+    const fileUnderTest = resolve('./src/__fixtures__', fileName)
+    if (!existsSync(fileUnderTest)) {
+      return { message: () => `File ${fileUnderTest} does not exist`, pass: false }
     }
 
     const diagnostics = getDiagnostics()
     const otherDiagnostics = diagnostics.filter((x) => !x.fileName)
     const fileDignostics = diagnostics
-      .filter((d) => d.fileName === desiredFile)
+      .filter((d) => d.fileName === fileUnderTest)
       .map((d) => ({ ...d, fileName }))
 
     // @ts-expect-error dunno how to fix this "this" type error

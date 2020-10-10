@@ -1,4 +1,6 @@
-import { BooleanDto } from '../types'
+import { Dto } from '../dto'
+
+export type BooleanDto = Dto<boolean>
 
 export const dtoGood: BooleanDto = false
 

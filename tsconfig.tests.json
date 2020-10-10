@@ -9,5 +9,5 @@
     "incremental": true,
     "tsBuildInfoFile": "./tsconfig.tests.tsbuildinfo"
   },
-  "include": ["./src/**/fixtures/*.ts"]
+  "include": ["./src/__fixtures__/**/*.ts"]
 }

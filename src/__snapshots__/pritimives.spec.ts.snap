@@ -4,26 +4,26 @@ exports[`Primitives returns correct diagnostics for boolean cases 1`] = `
 Array [
   Object {
     "character": 14,
-    "fileName": "boolean.ts",
-    "line": 5,
-    "message": "Type 'null' is not assignable to type 'boolean'.",
-  },
-  Object {
-    "character": 14,
-    "fileName": "boolean.ts",
+    "fileName": "primitive-boolean.ts",
     "line": 7,
     "message": "Type 'null' is not assignable to type 'boolean'.",
   },
   Object {
     "character": 14,
-    "fileName": "boolean.ts",
+    "fileName": "primitive-boolean.ts",
     "line": 9,
+    "message": "Type 'null' is not assignable to type 'boolean'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "primitive-boolean.ts",
+    "line": 11,
     "message": "Type 'string' is not assignable to type 'boolean'.",
   },
   Object {
     "character": 14,
-    "fileName": "boolean.ts",
-    "line": 11,
+    "fileName": "primitive-boolean.ts",
+    "line": 13,
     "message": "Type '{ bad: string; }' is not assignable to type 'boolean'.",
   },
 ]
@@ -33,20 +33,20 @@ exports[`Primitives returns correct diagnostics for null cases 1`] = `
 Array [
   Object {
     "character": 14,
-    "fileName": "null.ts",
-    "line": 5,
+    "fileName": "primitive-null.ts",
+    "line": 7,
     "message": "Type 'undefined' is not assignable to type 'null'.",
   },
   Object {
     "character": 14,
-    "fileName": "null.ts",
-    "line": 7,
+    "fileName": "primitive-null.ts",
+    "line": 9,
     "message": "Type '123' is not assignable to type 'null'.",
   },
   Object {
     "character": 14,
-    "fileName": "null.ts",
-    "line": 9,
+    "fileName": "primitive-null.ts",
+    "line": 11,
     "message": "Type '{ hey: string; }' is not assignable to type 'null'.",
   },
 ]
@@ -56,26 +56,26 @@ exports[`Primitives returns correct diagnostics for number cases 1`] = `
 Array [
   Object {
     "character": 14,
-    "fileName": "number.ts",
-    "line": 5,
-    "message": "Type 'null' is not assignable to type 'number'.",
-  },
-  Object {
-    "character": 14,
-    "fileName": "number.ts",
+    "fileName": "primitive-number.ts",
     "line": 7,
     "message": "Type 'null' is not assignable to type 'number'.",
   },
   Object {
     "character": 14,
-    "fileName": "number.ts",
+    "fileName": "primitive-number.ts",
     "line": 9,
+    "message": "Type 'null' is not assignable to type 'number'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "primitive-number.ts",
+    "line": 11,
     "message": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "character": 14,
-    "fileName": "number.ts",
-    "line": 11,
+    "fileName": "primitive-number.ts",
+    "line": 13,
     "message": "Type '{ bad: string; }' is not assignable to type 'number'.",
   },
 ]
@@ -85,32 +85,32 @@ exports[`Primitives returns correct diagnostics for string cases 1`] = `
 Array [
   Object {
     "character": 14,
-    "fileName": "string.ts",
-    "line": 5,
+    "fileName": "primitive-string.ts",
+    "line": 7,
     "message": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "character": 14,
-    "fileName": "string.ts",
-    "line": 7,
+    "fileName": "primitive-string.ts",
+    "line": 9,
     "message": "Type 'undefined' is not assignable to type 'string'.",
   },
   Object {
     "character": 14,
-    "fileName": "string.ts",
-    "line": 9,
+    "fileName": "primitive-string.ts",
+    "line": 11,
     "message": "Type 'boolean' is not assignable to type 'string'.",
   },
   Object {
     "character": 14,
-    "fileName": "string.ts",
-    "line": 11,
+    "fileName": "primitive-string.ts",
+    "line": 13,
     "message": "Type 'null' is not assignable to type 'string'.",
   },
   Object {
     "character": 14,
-    "fileName": "string.ts",
-    "line": 13,
+    "fileName": "primitive-string.ts",
+    "line": 15,
     "message": "Type '{ hello: string; }' is not assignable to type 'string'.",
   },
 ]

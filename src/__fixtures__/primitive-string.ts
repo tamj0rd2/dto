@@ -1,4 +1,6 @@
-import { StringDto } from '../types'
+import { Dto } from '../dto'
+
+export type StringDto = Dto<string>
 
 export const dtoGood: StringDto = 'Hello world!'
 

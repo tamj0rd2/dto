@@ -1,4 +1,6 @@
-import { NumberDto } from '../types'
+import { Dto } from '../dto'
+
+export type NumberDto = Dto<number>
 
 export const dtoGood: NumberDto = 123123
 

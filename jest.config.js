@@ -22,7 +22,6 @@ const unitTestSettings = {
   ...commonSettings,
   ...lowLevelTestSettings,
   displayName: 'Unit',
-  testMatch: ['<rootDir>/src/**/test.ts'],
   unmockedModulePathPatterns: [],
   coverageDirectory: './coverage/unit-tests',
   coverageReporters: ['lcov', 'text', 'text-summary'],
