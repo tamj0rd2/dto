@@ -1,11 +1,11 @@
 import { createTestCase } from '../test-helpers'
 
 describe('Primitives', () => {
-  describe('string', () => {
-    const stringTestCases = ['string-good.ts', 'string-null.ts', 'string-undefined.ts']
-    stringTestCases.forEach((fileName) =>
-      it(`returns the correct dianostics for fixture ${fileName}`, () =>
-        expect(createTestCase(__dirname, fileName)).toMatchDiagnosticsSnapshot()),
-    )
+  const fixtures = ['null', 'boolean', 'number', 'string']
+
+  fixtures.forEach((fixture) => {
+    it(`returns correct diagnostics for ${fixture} cases`, () => {
+      expect(createTestCase(__dirname, `${fixture}.ts`)).toMatchDiagnosticsSnapshot()
+    })
   })
 })

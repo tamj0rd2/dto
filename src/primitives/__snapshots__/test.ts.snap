@@ -1,25 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Primitives string returns the correct dianostics for fixture string-good.ts 1`] = `Array []`;
-
-exports[`Primitives string returns the correct dianostics for fixture string-null.ts 1`] = `
+exports[`Primitives returns correct diagnostics for boolean cases 1`] = `
 Array [
   Object {
     "character": 14,
-    "fileName": "string-null.ts",
-    "line": 3,
-    "message": "Type 'null' is not assignable to type 'string'.",
+    "fileName": "boolean.ts",
+    "line": 5,
+    "message": "Type 'null' is not assignable to type 'boolean'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "boolean.ts",
+    "line": 7,
+    "message": "Type 'null' is not assignable to type 'boolean'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "boolean.ts",
+    "line": 9,
+    "message": "Type 'string' is not assignable to type 'boolean'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "boolean.ts",
+    "line": 11,
+    "message": "Type '{ bad: string; }' is not assignable to type 'boolean'.",
   },
 ]
 `;
 
-exports[`Primitives string returns the correct dianostics for fixture string-undefined.ts 1`] = `
+exports[`Primitives returns correct diagnostics for null cases 1`] = `
 Array [
   Object {
     "character": 14,
-    "fileName": "string-undefined.ts",
-    "line": 3,
+    "fileName": "null.ts",
+    "line": 5,
+    "message": "Type 'undefined' is not assignable to type 'null'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "null.ts",
+    "line": 7,
+    "message": "Type '123' is not assignable to type 'null'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "null.ts",
+    "line": 9,
+    "message": "Type '{ hey: string; }' is not assignable to type 'null'.",
+  },
+]
+`;
+
+exports[`Primitives returns correct diagnostics for number cases 1`] = `
+Array [
+  Object {
+    "character": 14,
+    "fileName": "number.ts",
+    "line": 5,
+    "message": "Type 'null' is not assignable to type 'number'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "number.ts",
+    "line": 7,
+    "message": "Type 'null' is not assignable to type 'number'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "number.ts",
+    "line": 9,
+    "message": "Type 'string' is not assignable to type 'number'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "number.ts",
+    "line": 11,
+    "message": "Type '{ bad: string; }' is not assignable to type 'number'.",
+  },
+]
+`;
+
+exports[`Primitives returns correct diagnostics for string cases 1`] = `
+Array [
+  Object {
+    "character": 14,
+    "fileName": "string.ts",
+    "line": 5,
+    "message": "Type 'number' is not assignable to type 'string'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "string.ts",
+    "line": 7,
     "message": "Type 'undefined' is not assignable to type 'string'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "string.ts",
+    "line": 9,
+    "message": "Type 'boolean' is not assignable to type 'string'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "string.ts",
+    "line": 11,
+    "message": "Type 'null' is not assignable to type 'string'.",
+  },
+  Object {
+    "character": 14,
+    "fileName": "string.ts",
+    "line": 13,
+    "message": "Type '{ hello: string; }' is not assignable to type 'string'.",
   },
 ]
 `;
