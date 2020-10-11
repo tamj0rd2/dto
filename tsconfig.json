@@ -14,6 +14,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "noErrorTruncation": true,
     "noEmit": true,
     "paths": {
       "~dto": ["./src/dto.ts"]

@@ -30,7 +30,7 @@ Object {
   "errorCount": 5,
   "fileName": "builtins/optional-set.ts",
   "messages": Array [
-    "builtins/optional-set.ts:9(14) Type 'Set<number>' is missing the following properties from type 'number[]': length, pop, push, concat, and 23 more.",
+    "builtins/optional-set.ts:9(14) Type 'Set<number>' is not assignable to type 'number[]'.",
     "builtins/optional-set.ts:11(14) Type 'undefined' is not assignable to type 'number[] | null'.",
     "builtins/optional-set.ts:13(14) Type '\\"this is not good\\"' is not assignable to type 'number[] | null'.",
     "builtins/optional-set.ts:15(14) Type '192843' is not assignable to type 'number[] | null'.",
