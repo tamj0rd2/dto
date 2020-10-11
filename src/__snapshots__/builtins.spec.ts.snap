@@ -13,6 +13,22 @@ Object {
 }
 `;
 
+exports[`map.ts 1`] = `
+Object {
+  "errorCount": 6,
+  "fileName": "builtins/map.ts",
+  "messages": Array [
+    "builtins/map.ts:7(14) Type 'Map<string, number>' is not assignable to type 'Record<string, number>'.
+  Index signature is missing in type 'Map<string, number>'.",
+    "builtins/map.ts:9(14) Type 'null' is not assignable to type 'Record<string, number>'.",
+    "builtins/map.ts:11(14) Type 'undefined' is not assignable to type 'Record<string, number>'.",
+    "builtins/map.ts:13(14) Type 'string' is not assignable to type 'Record<string, number>'.",
+    "builtins/map.ts:15(14) Type 'number' is not assignable to type 'Record<string, number>'.",
+    "builtins/map.ts:17(39) Type 'string' is not assignable to type 'number'.",
+  ],
+}
+`;
+
 exports[`optional-date.ts 1`] = `
 Object {
   "errorCount": 3,
