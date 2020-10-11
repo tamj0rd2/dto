@@ -26,12 +26,6 @@ type ReplaceMap<T> = T extends Map<infer K, infer I>
 
 type ExcludeFuncsFromObj<T> = Pick<T, { [K in keyof T]: IsFunction<T[K]> extends true ? never : K }[keyof T]>
 
-export interface DatedValue<T> {
-  date: Date
-  value: T
-  sourceLink: string
-}
-
 type Dtoified<T> = IsValueType<T> extends true
   ? ReplaceDate<ReplaceMap<ReplaceSet<T>>>
   : // ? ReplaceDate<ReplaceMap<ReplaceSet<ReplaceDatedValue<T>>>>
@@ -42,3 +36,5 @@ export type Dto<T> = IsFunction<T> extends true
   : IsOptional<T> extends true
   ? Dtoified<Exclude<T, undefined>> | null
   : Dtoified<T>
+
+export type Serializable<T> = T & { serialize(): Dto<T> }

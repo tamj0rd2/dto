@@ -1,4 +1,4 @@
-import { Dto } from '~dto'
+import { Dto, Serializable } from '~dto'
 
 interface DatedValue<T> {
   date: Date
@@ -57,15 +57,22 @@ export const badFunctionDatedValue: DatedValueDto<() => void> = {
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export function serializeDatedValue<T extends Function>(value: DatedValue<T>): never
-export function serializeDatedValue<T>(value: DatedValue<T>): Dto<DatedValue<T>>
-export function serializeDatedValue<T>(value: DatedValue<T>): Dto<DatedValue<unknown>> {
-  if (typeof value === 'function') throw new Error('Functions cannot be serialized')
+export function serializeDatedValue<T extends Function>(datedValue: DatedValue<T>): never
+export function serializeDatedValue<T>(
+  datedValue: DatedValue<T>,
+): { date: string; value: Dto<T>; sourceLink: string }
+export function serializeDatedValue<T>(
+  datedValue: DatedValue<T>,
+): { date: string; value: Dto<T>; sourceLink: string } {
+  if (typeof datedValue.value === 'function') throw new Error('Functions cannot be serialized')
+
+  const isSerializable = (x: T): x is T & Serializable<T> =>
+    typeof (x as Serializable<T>).serialize === 'function'
 
   return {
-    date: 'my iso date',
-    sourceLink: 'my source link',
-    value: value,
+    date: datedValue.date.toJSON(),
+    sourceLink: datedValue.sourceLink,
+    value: isSerializable(datedValue.value) ? datedValue.value.serialize() : (datedValue.value as Dto<T>),
   }
 }
 
