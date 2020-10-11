@@ -51,6 +51,43 @@ Object {
 }
 `;
 
+exports[`optional-null.ts 1`] = `
+Object {
+  "errorCount": 3,
+  "fileName": "primitive/optional-null.ts",
+  "messages": Array [
+    "primitive/optional-null.ts:7(14) Type 'undefined' is not assignable to type 'null'.",
+    "primitive/optional-null.ts:9(14) Type '123' is not assignable to type 'null'.",
+    "primitive/optional-null.ts:11(14) Type '{ hey: string; }' is not assignable to type 'null'.",
+  ],
+}
+`;
+
+exports[`optional-number.ts 1`] = `
+Object {
+  "errorCount": 3,
+  "fileName": "primitive/optional-number.ts",
+  "messages": Array [
+    "primitive/optional-number.ts:9(14) Type 'undefined' is not assignable to type 'number | null'.",
+    "primitive/optional-number.ts:11(14) Type '\\"123897\\"' is not assignable to type 'number | null'.",
+    "primitive/optional-number.ts:13(14) Type '{ bad: string; }' is not assignable to type 'number'.",
+  ],
+}
+`;
+
+exports[`optional-string.ts 1`] = `
+Object {
+  "errorCount": 4,
+  "fileName": "primitive/optional-string.ts",
+  "messages": Array [
+    "primitive/optional-string.ts:9(14) Type '28947' is not assignable to type 'string | null'.",
+    "primitive/optional-string.ts:11(14) Type 'undefined' is not assignable to type 'string | null'.",
+    "primitive/optional-string.ts:13(14) Type 'false' is not assignable to type 'string | null'.",
+    "primitive/optional-string.ts:15(14) Type '{ hello: string; }' is not assignable to type 'string'.",
+  ],
+}
+`;
+
 exports[`string.ts 1`] = `
 Object {
   "errorCount": 5,
