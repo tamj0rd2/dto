@@ -41,6 +41,21 @@ Object {
 }
 `;
 
+exports[`optional-map.ts 1`] = `
+Object {
+  "errorCount": 5,
+  "fileName": "builtins/optional-map.ts",
+  "messages": Array [
+    "builtins/optional-map.ts:9(14) Type 'Map<string, number>' is not assignable to type 'Record<string, number>'.
+  Index signature is missing in type 'Map<string, number>'.",
+    "builtins/optional-map.ts:11(14) Type 'undefined' is not assignable to type 'Record<string, number> | null'.",
+    "builtins/optional-map.ts:13(14) Type '\\"this is not good\\"' is not assignable to type 'Record<string, number> | null'.",
+    "builtins/optional-map.ts:15(14) Type '192843' is not assignable to type 'Record<string, number> | null'.",
+    "builtins/optional-map.ts:17(39) Type 'string' is not assignable to type 'number'.",
+  ],
+}
+`;
+
 exports[`optional-set.ts 1`] = `
 Object {
   "errorCount": 5,
