@@ -1,66 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`primitive-boolean.ts 1`] = `
+exports[`boolean.ts 1`] = `
 Object {
   "errorCount": 4,
-  "fileName": "primitive-boolean.ts",
+  "fileName": "primitive/boolean.ts",
   "messages": Array [
-    "primitive-boolean.ts:7(14) Type 'null' is not assignable to type 'boolean'.",
-    "primitive-boolean.ts:9(14) Type 'undefined' is not assignable to type 'boolean'.",
-    "primitive-boolean.ts:11(14) Type 'string' is not assignable to type 'boolean'.",
-    "primitive-boolean.ts:13(14) Type '{ bad: string; }' is not assignable to type 'boolean'.",
+    "primitive/boolean.ts:7(14) Type 'null' is not assignable to type 'boolean'.",
+    "primitive/boolean.ts:9(14) Type 'undefined' is not assignable to type 'boolean'.",
+    "primitive/boolean.ts:11(14) Type 'string' is not assignable to type 'boolean'.",
+    "primitive/boolean.ts:13(14) Type '{ bad: string; }' is not assignable to type 'boolean'.",
   ],
 }
 `;
 
-exports[`primitive-null.ts 1`] = `
+exports[`null.ts 1`] = `
 Object {
   "errorCount": 3,
-  "fileName": "primitive-null.ts",
+  "fileName": "primitive/null.ts",
   "messages": Array [
-    "primitive-null.ts:7(14) Type 'undefined' is not assignable to type 'null'.",
-    "primitive-null.ts:9(14) Type '123' is not assignable to type 'null'.",
-    "primitive-null.ts:11(14) Type '{ hey: string; }' is not assignable to type 'null'.",
+    "primitive/null.ts:7(14) Type 'undefined' is not assignable to type 'null'.",
+    "primitive/null.ts:9(14) Type '123' is not assignable to type 'null'.",
+    "primitive/null.ts:11(14) Type '{ hey: string; }' is not assignable to type 'null'.",
   ],
 }
 `;
 
-exports[`primitive-number.ts 1`] = `
+exports[`number.ts 1`] = `
 Object {
   "errorCount": 4,
-  "fileName": "primitive-number.ts",
+  "fileName": "primitive/number.ts",
   "messages": Array [
-    "primitive-number.ts:7(14) Type 'null' is not assignable to type 'number'.",
-    "primitive-number.ts:9(14) Type 'undefined' is not assignable to type 'number'.",
-    "primitive-number.ts:11(14) Type 'string' is not assignable to type 'number'.",
-    "primitive-number.ts:13(14) Type '{ bad: string; }' is not assignable to type 'number'.",
+    "primitive/number.ts:7(14) Type 'null' is not assignable to type 'number'.",
+    "primitive/number.ts:9(14) Type 'undefined' is not assignable to type 'number'.",
+    "primitive/number.ts:11(14) Type 'string' is not assignable to type 'number'.",
+    "primitive/number.ts:13(14) Type '{ bad: string; }' is not assignable to type 'number'.",
   ],
 }
 `;
 
-exports[`primitive-optional-boolean.ts 1`] = `
+exports[`optional-boolean.ts 1`] = `
 Object {
   "errorCount": 3,
-  "fileName": "primitive-optional-boolean.ts",
+  "fileName": "primitive/optional-boolean.ts",
   "messages": Array [
-    "primitive-optional-boolean.ts:9(14) Type 'undefined' is not assignable to type 'boolean | null'.",
-    "primitive-optional-boolean.ts:11(14) Type '\\"123897\\"' is not assignable to type 'boolean | null'.",
-    "primitive-optional-boolean.ts:13(14) Type '{ bad: string; }' is not assignable to type 'boolean | null'.
+    "primitive/optional-boolean.ts:9(14) Type 'undefined' is not assignable to type 'boolean | null'.",
+    "primitive/optional-boolean.ts:11(14) Type '\\"123897\\"' is not assignable to type 'boolean | null'.",
+    "primitive/optional-boolean.ts:13(14) Type '{ bad: string; }' is not assignable to type 'boolean | null'.
   Type '{ bad: string; }' is not assignable to type 'true'.",
   ],
 }
 `;
 
-exports[`primitive-string.ts 1`] = `
+exports[`string.ts 1`] = `
 Object {
   "errorCount": 5,
-  "fileName": "primitive-string.ts",
+  "fileName": "primitive/string.ts",
   "messages": Array [
-    "primitive-string.ts:7(14) Type 'number' is not assignable to type 'string'.",
-    "primitive-string.ts:9(14) Type 'undefined' is not assignable to type 'string'.",
-    "primitive-string.ts:11(14) Type 'boolean' is not assignable to type 'string'.",
-    "primitive-string.ts:13(14) Type 'null' is not assignable to type 'string'.",
-    "primitive-string.ts:15(14) Type '{ hello: string; }' is not assignable to type 'string'.",
+    "primitive/string.ts:7(14) Type 'number' is not assignable to type 'string'.",
+    "primitive/string.ts:9(14) Type 'undefined' is not assignable to type 'string'.",
+    "primitive/string.ts:11(14) Type 'boolean' is not assignable to type 'string'.",
+    "primitive/string.ts:13(14) Type 'null' is not assignable to type 'string'.",
+    "primitive/string.ts:15(14) Type '{ hello: string; }' is not assignable to type 'string'.",
   ],
 }
 `;

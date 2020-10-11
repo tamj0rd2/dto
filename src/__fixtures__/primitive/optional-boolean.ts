@@ -1,4 +1,4 @@
-import { Dto } from '../dto'
+import { Dto } from '~dto'
 
 export type OptionalBooleanDto = Dto<boolean | undefined>
 
