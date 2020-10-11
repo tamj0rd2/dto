@@ -24,3 +24,34 @@ Object {
   ],
 }
 `;
+
+exports[`optional-set.ts 1`] = `
+Object {
+  "errorCount": 5,
+  "fileName": "builtins/optional-set.ts",
+  "messages": Array [
+    "builtins/optional-set.ts:9(14) Type 'Set<number>' is missing the following properties from type 'number[]': length, pop, push, concat, and 23 more.",
+    "builtins/optional-set.ts:11(14) Type 'undefined' is not assignable to type 'number[] | null'.",
+    "builtins/optional-set.ts:13(14) Type '\\"this is not good\\"' is not assignable to type 'number[] | null'.",
+    "builtins/optional-set.ts:15(14) Type '192843' is not assignable to type 'number[] | null'.",
+    "builtins/optional-set.ts:17(47) Type '{ bad: string; }' is not assignable to type 'number[]'.
+  Object literal may only specify known properties, and 'bad' does not exist in type 'number[]'.",
+  ],
+}
+`;
+
+exports[`set.ts 1`] = `
+Object {
+  "errorCount": 6,
+  "fileName": "builtins/set.ts",
+  "messages": Array [
+    "builtins/set.ts:7(14) Type 'Set<number>' is missing the following properties from type 'number[]': length, pop, push, concat, and 23 more.",
+    "builtins/set.ts:9(14) Type 'null' is not assignable to type 'number[]'.",
+    "builtins/set.ts:11(14) Type 'undefined' is not assignable to type 'number[]'.",
+    "builtins/set.ts:13(14) Type 'string' is not assignable to type 'number[]'.",
+    "builtins/set.ts:15(14) Type 'number' is not assignable to type 'number[]'.",
+    "builtins/set.ts:17(39) Type '{ bad: string; }' is not assignable to type 'number[]'.
+  Object literal may only specify known properties, and 'bad' does not exist in type 'number[]'.",
+  ],
+}
+`;

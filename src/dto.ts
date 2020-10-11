@@ -2,9 +2,11 @@
 
 type IsOptional<T> = Extract<T, undefined> extends never ? false : true
 type IsFunction<T> = T extends (...args: any[]) => any ? true : false
-type IsDate<T> = T extends Date ? true : false
 
-type Dtoified<T> = IsDate<T> extends true ? string : T
+type ReplaceDate<T> = T extends Date ? string : T
+type ReplaceSet<T> = T extends Set<infer X> ? X[] : T
+
+type Dtoified<T> = ReplaceDate<ReplaceSet<T>>
 
 export type Dto<T> = IsFunction<T> extends true
   ? never
