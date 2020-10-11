@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "typecheck": "tsc",
+    "typecheck": "tsc -b tsconfig.typecheck.json",
     "lint:base": "eslint --color --ignore-path .gitignore --cache",
     "lint": "npm run lint:base -- '**/*.ts' --fix"
   },

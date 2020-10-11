@@ -5,16 +5,17 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "rootDir": "./src",
+    "outDir": "./out",
     "baseUrl": "./",
     "typeRoots": ["./node_modules/@types"],
     "strict": true,
+    "strictNullChecks": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "strictNullChecks": true,
     "noEmit": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "test-out", "./src/__fixtures__"]
+  "exclude": ["node_modules"]
 }

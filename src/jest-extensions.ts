@@ -16,7 +16,7 @@ function getDiagnostics() {
   const diagnostics: ts.Diagnostic[] = []
   const reportDiagnostic = (diagnostic: ts.Diagnostic) => diagnostics.push(diagnostic)
   const solutionBuilderHost = ts.createSolutionBuilderHost(ts.sys, undefined, reportDiagnostic)
-  const solutionBuilder = ts.createSolutionBuilder(solutionBuilderHost, ['./tsconfig.tests.json'], {
+  const solutionBuilder = ts.createSolutionBuilder(solutionBuilderHost, ['./tsconfig.json'], {
     incremental: true,
   })
   solutionBuilder.build()
@@ -50,7 +50,19 @@ expect.extend({
       .filter((d) => d.fileName === fileUnderTest)
       .map((d) => ({ ...d, fileName }))
 
+    const messages = [
+      ...otherDiagnostics.map((d) => d.message),
+      ...fileDignostics.map((d) => `${d.fileName}:${d.line}(${d.character}) ${d.message}`),
+    ]
+    const errorCount = messages.length
+
+    const result = {
+      fileName,
+      errorCount,
+      messages,
+    }
+
     // @ts-expect-error dunno how to fix this "this" type error
-    return toMatchSnapshot.call(this, [...otherDiagnostics, ...fileDignostics])
+    return toMatchSnapshot.call(this, result)
   },
 })

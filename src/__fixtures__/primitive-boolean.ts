@@ -6,7 +6,7 @@ export const dtoGood: BooleanDto = false
 
 export const dtoBadNull: BooleanDto = null
 
-export const dtoBadUndefined: BooleanDto = null
+export const dtoBadUndefined: BooleanDto = undefined
 
 export const dtoBadString: BooleanDto = '123897'
 
