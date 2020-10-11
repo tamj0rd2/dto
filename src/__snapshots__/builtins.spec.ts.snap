@@ -18,8 +18,7 @@ Object {
   "errorCount": 6,
   "fileName": "builtins/map.ts",
   "messages": Array [
-    "builtins/map.ts:7(14) Type 'Map<string, number>' is not assignable to type 'Record<string, number>'.
-  Index signature is missing in type 'Map<string, number>'.",
+    "builtins/map.ts:7(14) Type 'Map<string, number>' is not assignable to type 'Record<string, number>'.",
     "builtins/map.ts:9(14) Type 'null' is not assignable to type 'Record<string, number>'.",
     "builtins/map.ts:11(14) Type 'undefined' is not assignable to type 'Record<string, number>'.",
     "builtins/map.ts:13(14) Type 'string' is not assignable to type 'Record<string, number>'.",
@@ -46,7 +45,8 @@ Object {
   "errorCount": 5,
   "fileName": "builtins/optional-map.ts",
   "messages": Array [
-    "builtins/optional-map.ts:9(14) Type 'Map<string, number>' is not assignable to type 'Record<string, number>'.",
+    "builtins/optional-map.ts:9(14) Type 'Map<string, number>' is not assignable to type 'Record<string, number>'.
+  Index signature is missing in type 'Map<string, number>'.",
     "builtins/optional-map.ts:11(14) Type 'undefined' is not assignable to type 'Record<string, number> | null'.",
     "builtins/optional-map.ts:13(14) Type '\\"this is not good\\"' is not assignable to type 'Record<string, number> | null'.",
     "builtins/optional-map.ts:15(14) Type '192843' is not assignable to type 'Record<string, number> | null'.",
@@ -60,7 +60,7 @@ Object {
   "errorCount": 5,
   "fileName": "builtins/optional-set.ts",
   "messages": Array [
-    "builtins/optional-set.ts:9(14) Type 'Set<number>' is missing the following properties from type 'number[]': length, pop, push, concat, and 23 more.",
+    "builtins/optional-set.ts:9(14) Type 'Set<number>' is not assignable to type 'number[]'.",
     "builtins/optional-set.ts:11(14) Type 'undefined' is not assignable to type 'number[] | null'.",
     "builtins/optional-set.ts:13(14) Type '\\"this is not good\\"' is not assignable to type 'number[] | null'.",
     "builtins/optional-set.ts:15(14) Type '192843' is not assignable to type 'number[] | null'.",
@@ -75,7 +75,7 @@ Object {
   "errorCount": 6,
   "fileName": "builtins/set.ts",
   "messages": Array [
-    "builtins/set.ts:7(14) Type 'Set<number>' is not assignable to type 'number[]'.",
+    "builtins/set.ts:7(14) Type 'Set<number>' is missing the following properties from type 'number[]': length, pop, push, concat, and 23 more.",
     "builtins/set.ts:9(14) Type 'null' is not assignable to type 'number[]'.",
     "builtins/set.ts:11(14) Type 'undefined' is not assignable to type 'number[]'.",
     "builtins/set.ts:13(14) Type 'string' is not assignable to type 'number[]'.",
