@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`date.ts 1`] = `
+Object {
+  "errorCount": 4,
+  "fileName": "builtins/date.ts",
+  "messages": Array [
+    "builtins/date.ts:7(14) Type 'Date' is not assignable to type 'string'.",
+    "builtins/date.ts:9(14) Type 'null' is not assignable to type 'string'.",
+    "builtins/date.ts:11(14) Type 'undefined' is not assignable to type 'string'.",
+    "builtins/date.ts:13(14) Type '{ bad: string; }' is not assignable to type 'string'.",
+  ],
+}
+`;
+
+exports[`optional-date.ts 1`] = `
+Object {
+  "errorCount": 3,
+  "fileName": "builtins/optional-date.ts",
+  "messages": Array [
+    "builtins/optional-date.ts:9(14) Type 'Date' is not assignable to type 'string'.",
+    "builtins/optional-date.ts:11(14) Type 'undefined' is not assignable to type 'string | null'.",
+    "builtins/optional-date.ts:13(14) Type '{ bad: string; }' is not assignable to type 'string'.",
+  ],
+}
+`;
