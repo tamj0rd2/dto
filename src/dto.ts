@@ -13,6 +13,7 @@ type IsValueType<T> = T extends
   | Set<any>
   | Map<any, any>
   | Date
+  | Array<any>
   ? true
   : false
 
@@ -23,13 +24,13 @@ type ReplaceMap<T> = T extends Map<infer K, infer I>
     ? Record<K, I>
     : Record<string, I>
   : T
+type ReplaceArray<T> = T extends Array<infer X> ? Dto<X>[] : T
 
 type ExcludeFuncsFromObj<T> = Pick<T, { [K in keyof T]: IsFunction<T[K]> extends true ? never : K }[keyof T]>
 
 type Dtoified<T> = IsValueType<T> extends true
-  ? ReplaceDate<ReplaceMap<ReplaceSet<T>>>
-  : // ? ReplaceDate<ReplaceMap<ReplaceSet<ReplaceDatedValue<T>>>>
-    { [K in keyof ExcludeFuncsFromObj<T>]: Dto<T[K]> }
+  ? ReplaceDate<ReplaceMap<ReplaceSet<ReplaceArray<T>>>>
+  : { [K in keyof ExcludeFuncsFromObj<T>]: Dto<T[K]> }
 
 export type Dto<T> = IsFunction<T> extends true
   ? never

@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`array.ts 1`] = `
+Object {
+  "errorCount": 6,
+  "fileName": "builtins/array.ts",
+  "messages": Array [
+    "builtins/array.ts:7(14) Type 'Set<number>' is not assignable to type 'number[]'.",
+    "builtins/array.ts:9(14) Type 'null' is not assignable to type 'number[]'.",
+    "builtins/array.ts:11(14) Type 'undefined' is not assignable to type 'number[]'.",
+    "builtins/array.ts:13(14) Type 'string' is not assignable to type 'number[]'.",
+    "builtins/array.ts:15(14) Type 'number' is not assignable to type 'number[]'.",
+    "builtins/array.ts:17(41) Type '{ bad: string; }' is not assignable to type 'number[]'.
+  Object literal may only specify known properties, and 'bad' does not exist in type 'number[]'.",
+  ],
+}
+`;
+
 exports[`date.ts 1`] = `
 Object {
   "errorCount": 4,
