@@ -5,7 +5,7 @@ type MyFunc = (name: string, age: number) => [string, number]
 export type FunctionDto = Dto<MyFunc>
 
 // this should error because functions cannot be serialized
-export const dtoBad: FunctionDto = (name: string, age: number) => [name, age]
+export const dtoBad: FunctionDto = (name: string, age: number): [string, number] => [name, age]
 
 // the rest of these should all error because we never want functions to go over
 // the wire at all. FunctionDto should be of type never

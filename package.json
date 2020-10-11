@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "pretest": "rm -rf tsconfig.tsbuildinfo",
+    "test": "jest --runInBand",
     "typecheck": "tsc -b tsconfig.typecheck.json",
     "lint:base": "eslint --color --ignore-path .gitignore --cache",
     "lint": "npm run lint:base -- '**/*.ts' --fix"

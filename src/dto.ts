@@ -21,7 +21,7 @@ type ReplaceSet<T> = T extends Set<infer X> ? X[] : T
 type ReplaceMap<T> = T extends Map<infer K, infer I>
   ? K extends string | number | symbol
     ? Record<K, I>
-    : T
+    : Record<string, I>
   : T
 
 type ExcludeFuncsFromObj<T> = Pick<T, { [K in keyof T]: IsFunction<T[K]> extends true ? never : K }[keyof T]>
