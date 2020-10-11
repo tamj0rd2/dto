@@ -5,15 +5,15 @@ Object {
   "errorCount": 7,
   "fileName": "objects/basic.ts",
   "messages": Array [
-    "objects/basic.ts:8(14) Property 'name' is missing in type '{ age: number; }' but required in type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/basic.ts:10(73) Type '{ age: number; name: string; location: string; }' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.
-  Object literal may only specify known properties, and 'location' does not exist in type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/basic.ts:12(14) Type 'null' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/basic.ts:14(14) Type 'undefined' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/basic.ts:16(14) Type 'string' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/basic.ts:18(14) Type 'number' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/basic.ts:20(42) Type '{ bad: string; }' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.
-  Object literal may only specify known properties, and 'bad' does not exist in type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
+    "objects/basic.ts:8(14) Property 'name' is missing in type '{ age: number; }' but required in type '{ name: string; age: number; }'.",
+    "objects/basic.ts:10(73) Type '{ age: number; name: string; location: string; }' is not assignable to type '{ name: string; age: number; }'.
+  Object literal may only specify known properties, and 'location' does not exist in type '{ name: string; age: number; }'.",
+    "objects/basic.ts:12(14) Type 'null' is not assignable to type '{ name: string; age: number; }'.",
+    "objects/basic.ts:14(14) Type 'undefined' is not assignable to type '{ name: string; age: number; }'.",
+    "objects/basic.ts:16(14) Type 'string' is not assignable to type '{ name: string; age: number; }'.",
+    "objects/basic.ts:18(14) Type 'number' is not assignable to type '{ name: string; age: number; }'.",
+    "objects/basic.ts:20(42) Type '{ bad: string; }' is not assignable to type '{ name: string; age: number; }'.
+  Object literal may only specify known properties, and 'bad' does not exist in type '{ name: string; age: number; }'.",
   ],
 }
 `;
@@ -23,11 +23,32 @@ Object {
   "errorCount": 4,
   "fileName": "objects/strips-functions.ts",
   "messages": Array [
-    "objects/strips-functions.ts:8(66) Type '{ age: number; name: string; speak: () => undefined; }' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.
-  Object literal may only specify known properties, and 'speak' does not exist in type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/strips-functions.ts:10(14) Property 'name' is missing in type '{ age: number; }' but required in type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/strips-functions.ts:12(14) Type 'null' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
-    "objects/strips-functions.ts:14(14) Type 'undefined' is not assignable to type 'Pick<MyObj, \\"name\\" | \\"age\\">'.",
+    "objects/strips-functions.ts:8(66) Type '{ age: number; name: string; speak: () => undefined; }' is not assignable to type '{ name: string; age: number; }'.
+  Object literal may only specify known properties, and 'speak' does not exist in type '{ name: string; age: number; }'.",
+    "objects/strips-functions.ts:10(14) Property 'name' is missing in type '{ age: number; }' but required in type '{ name: string; age: number; }'.",
+    "objects/strips-functions.ts:12(14) Type 'null' is not assignable to type '{ name: string; age: number; }'.",
+    "objects/strips-functions.ts:14(14) Type 'undefined' is not assignable to type '{ name: string; age: number; }'.",
+  ],
+}
+`;
+
+exports[`strips-nested-functions.ts 1`] = `
+Object {
+  "errorCount": 7,
+  "fileName": "objects/strips-nested-functions.ts",
+  "messages": Array [
+    "objects/strips-nested-functions.ts:37(7) Type '{ hello3: string; world3: () => undefined; }' is not assignable to type '{ hello3: string; }'.
+  Object literal may only specify known properties, and 'world3' does not exist in type '{ hello3: string; }'.",
+    "objects/strips-nested-functions.ts:49(7) Type '{ hello3: string; world3: () => undefined; }' is not assignable to type '{ hello3: string; }'.
+  Object literal may only specify known properties, and 'world3' does not exist in type '{ hello3: string; }'.",
+    "objects/strips-nested-functions.ts:56(3) Type '{ hello1: string; world1: () => undefined; nested1: { hello2: string; nested2: { hello3: string; }; }; }' is not assignable to type '{ hello1: string; nested1: { hello2: string; nested2: { hello3: string; }; }; }'.
+  Object literal may only specify known properties, and 'world1' does not exist in type '{ hello1: string; nested1: { hello2: string; nested2: { hello3: string; }; }; }'.",
+    "objects/strips-nested-functions.ts:69(5) Type '{ hello2: string; world2: () => undefined; nested2: { hello3: string; }; }' is not assignable to type '{ hello2: string; nested2: { hello3: string; }; }'.
+  Object literal may only specify known properties, and 'world2' does not exist in type '{ hello2: string; nested2: { hello3: string; }; }'.",
+    "objects/strips-nested-functions.ts:82(7) Type '{ hello3: string; world3: () => undefined; }' is not assignable to type '{ hello3: string; }'.
+  Object literal may only specify known properties, and 'world3' does not exist in type '{ hello3: string; }'.",
+    "objects/strips-nested-functions.ts:87(14) Type 'null' is not assignable to type '{ hello1: string; nested1: { hello2: string; nested2: { hello3: string; }; }; }'.",
+    "objects/strips-nested-functions.ts:89(14) Type 'undefined' is not assignable to type '{ hello1: string; nested1: { hello2: string; nested2: { hello3: string; }; }; }'.",
   ],
 }
 `;

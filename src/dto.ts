@@ -12,7 +12,9 @@ type ReplaceSet<T> = T extends Set<infer X> ? X[] : T
 
 type ExcludeFuncsFromObj<T> = Pick<T, { [K in keyof T]: IsFunction<T[K]> extends true ? never : K }[keyof T]>
 
-type Dtoified<T> = IsObject<T> extends true ? ExcludeFuncsFromObj<T> : ReplaceDate<ReplaceSet<T>>
+type Dtoified<T> = IsObject<T> extends true
+  ? { [K in keyof ExcludeFuncsFromObj<T>]: Dto<T[K]> }
+  : ReplaceDate<ReplaceSet<T>>
 
 export type Dto<T> = IsFunction<T> extends true
   ? never
