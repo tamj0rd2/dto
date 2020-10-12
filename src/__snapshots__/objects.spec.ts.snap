@@ -2,7 +2,7 @@
 
 exports[`basic.ts 1`] = `
 Object {
-  "errorCount": 7,
+  "errorCount": 10,
   "fileName": "objects/basic.ts",
   "messages": Array [
     "objects/basic.ts:8(14) Property 'name' is missing in type '{ age: number; favouriteFilms: never[]; }' but required in type '{ name: string; age: number; favouriteFilms: string[]; }'.",
@@ -14,6 +14,9 @@ Object {
     "objects/basic.ts:18(14) Type 'number' is not assignable to type '{ name: string; age: number; favouriteFilms: string[]; }'.",
     "objects/basic.ts:20(42) Type '{ bad: string; }' is not assignable to type '{ name: string; age: number; favouriteFilms: string[]; }'.
   Object literal may only specify known properties, and 'bad' does not exist in type '{ name: string; age: number; favouriteFilms: string[]; }'.",
+    "objects/basic.ts:52(3) Type 'Date' is not assignable to type 'string'.",
+    "objects/basic.ts:55(5) Type 'Date' is not assignable to type 'string'.",
+    "objects/basic.ts:58(7) Type 'Date' is not assignable to type 'string'.",
   ],
 }
 `;

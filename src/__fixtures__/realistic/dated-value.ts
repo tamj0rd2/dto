@@ -65,6 +65,11 @@ export const badNestedDatedValue: Dto<NestedDatedValue<string>> = {
   nested: { date: new Date(), sourceLink: 'sourceLink', value: 'value' },
 }
 
+export const mapOfDatedValue: Dto<Map<string, DatedValue<string>>> = {
+  goodItem: { date: 'my iso string', sourceLink: 'source', value: 'myvalue' },
+  badItem: { date: new Date(), sourceLink: 'source', value: 'myvalue' },
+}
+
 // eslint-disable-next-line @typescript-eslint/ban-types
 export function serializeDatedValue<T extends Function>(datedValue: DatedValue<T>): never
 export function serializeDatedValue<T>(

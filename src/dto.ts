@@ -21,9 +21,10 @@ type IsValueType<T> = T extends
 type ReplaceDate<T> = T extends Date ? string : T
 type ReplaceSet<T> = T extends Set<infer X> ? X[] : T
 type ReplaceMap<T> = T extends Map<infer K, infer I>
-  ? K extends string | number | symbol
-    ? Record<K, I>
-    : Record<string, I>
+  ? Record<
+      K extends string | number | symbol ? K : string,
+      IsValueType<I> extends true ? I : { [K in keyof ExcludeFuncsFromObj<I>]: Dto<I[K]> }
+    >
   : T
 type ReplaceArray<T> = T extends Array<infer X> ? Dto<X>[] : T
 
