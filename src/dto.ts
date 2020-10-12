@@ -2,14 +2,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 type IsOptional<T> = Extract<T, undefined> extends never ? false : true
-type IsFunction<T> = T extends Function ? true : false
+export type Func = (...args: any[]) => any
+type IsFunction<T> = T extends Func ? true : false
 type IsValueType<T> = T extends
   | string
   | number
   | boolean
   | null
   | undefined
-  | Function
+  | Func
   | Set<any>
   | Map<any, any>
   | Date

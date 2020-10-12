@@ -56,6 +56,15 @@ export const badFunctionDatedValue: DatedValueDto<() => void> = {
   value: () => void undefined,
 }
 
+type NestedDatedValue<T> = { nested: DatedValue<T> }
+export const goodNestedDatedValue: Dto<NestedDatedValue<string>> = {
+  nested: { date: 'iso date', sourceLink: 'sourceLink', value: 'value' },
+}
+
+export const badNestedDatedValue: Dto<NestedDatedValue<string>> = {
+  nested: { date: new Date(), sourceLink: 'sourceLink', value: 'value' },
+}
+
 // eslint-disable-next-line @typescript-eslint/ban-types
 export function serializeDatedValue<T extends Function>(datedValue: DatedValue<T>): never
 export function serializeDatedValue<T>(
