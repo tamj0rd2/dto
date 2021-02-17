@@ -6,7 +6,7 @@ I made this playground as a way to safely iterate on the DTO type without regres
 
 ## How it works
 
-The DTO is located in src/dto.ts
+The DTO is located in [src/dto.ts](./src/dto.ts)
 
 The tests are located in the __fixtures__ folder.
 
