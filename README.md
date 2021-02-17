@@ -4,7 +4,11 @@ A generic typescript utility type that transforms a given type into something th
 
 I made this playground as a way to safely iterate on the DTO type without regression
 
-## How it works
+## But why?
+
+Here's a blog post where I explain: https://dev.to/tamj0rd2/dto-a-typescript-utility-type-4o3m
+
+## How this repo works
 
 The DTO is located in [src/dto.ts](./src/dto.ts)
 
